@@ -39,7 +39,7 @@ author:
   url       :
   avatar    : ./favicon.ico # path or url of avatar image (square)
   bio       : 懒得写简介，就是个编程小白……
-  email     :
+  email     : war_ning@yeah.net
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -49,7 +49,7 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : https://github.com/war-ning # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : war-ning/war-ning.github.io # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
@@ -94,7 +94,7 @@ mermaid: # false (default), true
 chart: # false (default), true
 
 
-## => Paginate
+## => 分页信息
 ##############################
 paginate: 8
 paginate_path: /page:num # don't change this unless for special need
