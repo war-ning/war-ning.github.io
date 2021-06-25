@@ -1,53 +1,43 @@
 header:
   - titles:
-      # @start locale config
-      en      : &EN       Archive
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  归档
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  歸檔
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-      ko      : &KO       아카이브
-      ko-KR   : *KO
-      fr      : &FR       Archives
-      fr-BE   : *FR
-      fr-CA   : *FR
-      fr-CH   : *FR
-      fr-FR   : *FR
-      fr-LU   : *FR
-      # @end locale config
+      en: Java
+      zh: Java
+    url: /assets/category/java/java.html
+  - titles:
+      en :  DateBase
+      zh :  数据库
+    url: /assets/category/datebase/datebase.html
+
+  - titles:
+      en :  Archive
+      zh :  归档
     url: /archive.html
 
   - titles:
       # @start locale config
       en      : &EN       About
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  关于
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  關於
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-      ko      : &KO       소개
-      ko-KR   : *KO
-      fr      : &FR       À propos
-      fr-BE   : *FR
-      fr-CA   : *FR
-      fr-CH   : *FR
-      fr-FR   : *FR
-      fr-LU   : *FR
-      # @end locale config
+      zh : &ZH_HANS  关于
     url: /about.html
 
-  - title:      GitHub
-    url:        https://github.com/war-ning/war-ning.github.io
+DateBase:
+  - title:      数据库
+    children:
+      - title:  Redis
+        url:    /assets/category/datebase/redis.html
+      - title:  MySQL
+        url:    /assets/category/datebase/mysql.html
+
+Java:
+  - title:      基础知识
+    children:
+      - title:  基础语法
+        url:    /assets/category/datebase/redis.html
+      - title:  Java8新特性
+        url:    /assets/category/datebase/mysql.html
+
+  - title:      技术框架
+    children:
+      - title:  Spring
+        url:    /assets/category/datebase/redis.html
+      - title:  MyBatis
+        url:    /assets/category/datebase/mysql.html
