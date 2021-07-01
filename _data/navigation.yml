@@ -30,14 +30,14 @@ DateBase:
 Java:
   - title:      基础知识
     children:
-      - title:  基础语法
-        url:    /assets/category/datebase/redis.html
+      - title:  Java进阶
+        url:    /assets/category/java/advance.html
       - title:  Java8新特性
-        url:    /assets/category/datebase/mysql.html
+        url:    /assets/category/java/jdk8.html
 
   - title:      技术框架
     children:
       - title:  Spring
-        url:    /assets/category/datebase/redis.html
+        url:    /assets/category/java/spring.html
       - title:  MyBatis
-        url:    /assets/category/datebase/mysql.html
+        url:    /assets/category/java/mybaits.html
