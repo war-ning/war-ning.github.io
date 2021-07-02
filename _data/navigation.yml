@@ -41,3 +41,11 @@ Java:
         url:    /assets/category/java/spring.html
       - title:  MyBatis
         url:    /assets/category/java/mybaits.html
+
+Web:
+  - title:      基础知识
+    children:
+      - title:  Vue组件
+        url:    /assets/category/web/modules.html
+      - title:  Vue进阶
+        url:    /assets/category/web/vue.html
