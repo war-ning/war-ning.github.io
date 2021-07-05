@@ -3,10 +3,16 @@ header:
       en: Java
       zh: Java
     url: /assets/category/java/java.html
+
   - titles:
       en :  DateBase
       zh :  数据库
     url: /assets/category/datebase/datebase.html
+
+  - titles:
+      en :  Web
+      zh :  前端
+    url: /assets/category/web/web.html
 
   - titles:
       en :  Archive
@@ -15,7 +21,7 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       About
+      en : &EN       About
       zh : &ZH_HANS  关于
     url: /about.html
 
@@ -28,7 +34,7 @@ DateBase:
         url:    /assets/category/datebase/mysql.html
 
 Java:
-  - title:      基础知识
+  - title:      Java
     children:
       - title:  Java进阶
         url:    /assets/category/java/advance.html
@@ -43,7 +49,7 @@ Java:
         url:    /assets/category/java/mybaits.html
 
 Web:
-  - title:      基础知识
+  - title:      前端知识
     children:
       - title:  Vue组件
         url:    /assets/category/web/modules.html
