@@ -1,0 +1,21 @@
+---
+layout: articles
+titles:
+    en:       Arithmetic
+    zh:       算法题
+sidebar:
+    nav: Arithmetic
+---
+
+
+<ul>
+    {% for cat in site.categories %}
+        {% if cat[0] == "arithmetic" %}
+        {% for post in cat[1] %}
+        {{post.date | date:"%Y/%m/%d"}}
+        <font size="3"><a href={{post.url}} title={{ cat[0] }}>{{post.title}}</a></font>
+        <br>
+        {% endfor %}
+        {% endif %}
+    {% endfor %}
+</ul>

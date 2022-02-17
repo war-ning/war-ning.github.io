@@ -1,0 +1,77 @@
+header:
+  - titles:
+      en: Java
+      zh: Java
+    url: /assets/category/java/java.html
+
+  - titles:
+      en :  DateBase
+      zh :  数据库
+    url: /assets/category/datebase/datebase.html
+
+  - titles:
+      en :  Web
+      zh :  前端
+    url: /assets/category/web/web.html
+
+  - titles:
+      en: Arithmetic
+      zh: 算法题
+    url: /assets/category/arithmetic/arithmetic.html
+
+  - titles:
+      en :  Archive
+      zh :  归档
+    url: /archive.html
+
+  - titles:
+      # @start locale config
+      en : &EN       About
+      zh : &ZH_HANS  关于
+    url: /about.html
+
+DateBase:
+  - title:      数据库
+    children:
+      - title:  Redis
+        url:    /assets/category/datebase/redis.html
+      - title:  MySQL
+        url:    /assets/category/datebase/mysql.html
+
+Java:
+  - title:      Java
+    children:
+      - title:  Java进阶
+        url:    /assets/category/java/advance.html
+      - title:  Java8新特性
+        url:    /assets/category/java/jdk8.html
+
+  - title:      技术框架
+    children:
+      - title:  Spring
+        url:    /assets/category/java/spring.html
+      - title:  MyBatis
+        url:    /assets/category/java/mybaits.html
+
+Web:
+  - title:      前端知识
+    children:
+      - title:  Vue组件
+        url:    /assets/category/web/modules.html
+      - title:  Vue进阶
+        url:    /assets/category/web/vue.html
+
+Arithmetic:
+  - title:      初级算法
+    children:
+      - title:  数组
+        url:    /assets/category/arithmetic/low/array.html
+      - title:  中级算法
+        url:    /assets/category/arithmetic/low/string.html
+
+  - title:      中级算法
+    children:
+      - title:  数组
+        url:    /assets/category/arithmetic/middle/array.html
+      - title:  中级算法
+        url:    /assets/category/arithmetic/middle/string.html
