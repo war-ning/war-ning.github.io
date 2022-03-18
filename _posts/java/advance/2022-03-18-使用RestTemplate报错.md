@@ -15,6 +15,9 @@ category: [java, advance]
 
 <!--more-->
 
+## 报错原因
+
+
 在RestTemplate的配置类里使用了 @LoadBalanced
 
 ```java
@@ -62,15 +65,12 @@ public class RestTemplateConfig {
 源帖地址 > [深入理解@LoadBalanced注解的实现原理与客户端负载均衡](https://copyfuture.com/blogs-details/20191114194436253rmip8gwhn7ut0ix)
 
 
-## 前提
+## @LoadBalanced注解概述
 
-在阅读这篇博客之前,希望你对SpringCloud套件熟悉和理解,更希望关注下[微服务开发平台](https://gitee.com/ibyte/M-Pass)
-
-## 概述
 
 在使用springcloud ribbon客户端负载均衡的时候，可以给RestTemplate bean 加一个@LoadBalanced注解，就能让这个RestTemplate在请求时拥有客户端负载均衡的能力,先前有细嚼过但是没有做过笔记,刚好处理此类问题记录下
 
-## @LoadBalanced
+### @LoadBalanced
 
 ```java
 /**
@@ -87,7 +87,7 @@ public @interface LoadBalanced {
 
 通过源码可以发现这是一个`LoadBalanced`标记注解并且标记了`@Qualifier`(基于Spring Boot的自动配置机制),我们可以溯源到`LoadBalancerAutoConfiguration`
 
-### LoadBalancerAutoConfiguration
+#### LoadBalancerAutoConfiguration
 
 ```java
   /**
@@ -146,7 +146,7 @@ public @interface LoadBalanced {
 继续扒看源码>
 上面可以看出，会`LoadBalancerAutoConfiguration类`对我们加上`@LoadBalanced`注解的bean 添加`loadBalancerInterceptor`拦截器
 
-### LoadBalancerInterceptor
+#### LoadBalancerInterceptor
 
 ```java
     /**
@@ -179,7 +179,7 @@ public @interface LoadBalanced {
 
 重点看intercept方法 当我们restTemplate执行请求操作时，就会被拦截器拦截进入intercept方法,而loadBalancer是LoadBalancerClient的具体实现
 
-### RibbonLoadBalancerClient
+#### RibbonLoadBalancerClient
 
 ```java
  public <T> T execute(String serviceId, LoadBalancerRequest<T> request, Object hint)
@@ -202,7 +202,7 @@ throws IOException {
 No instances available for xxxxx
 ```
 
-## 总结
+### 总结
 
 - 1.根据serviceId 获取对应的loadBalancer
 - 2.根据loadBalancer获取具体的server（这里根据负载均衡规则，获取到具体的服务实例）
@@ -213,7 +213,7 @@ No instances available for xxxxx
 
 > 注意: @LoadBalanced 标记注解获取到最后通过负载均衡规则获取具体的具体的server来发起请求
 
-## 案例
+### 案例
 
 ```java
 /**
