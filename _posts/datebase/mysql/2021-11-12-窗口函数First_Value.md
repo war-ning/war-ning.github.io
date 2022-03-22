@@ -2,7 +2,7 @@
 layout: articles
 title: MySQL FIRST_VALUE 函数
 tags:  mysql
-author: WarNing
+author: Warning
 key:    datebase-mysql-head-11
 aside:
   toc: true

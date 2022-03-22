@@ -2,7 +2,7 @@
 layout: articles
 title: Element-ui Layout布局
 tags:  Vue
-author: WarNing
+author: Warning
 key:    web-vue-head-02
 aside:
   toc: true

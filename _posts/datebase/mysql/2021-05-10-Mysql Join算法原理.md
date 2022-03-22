@@ -2,7 +2,7 @@
 layout: articles
 title: Mysql Join算法原理
 tags:  数据库基础
-author: WarNing
+author: Warning
 key:    datebase-mysql-head-07
 aside:
   toc: true

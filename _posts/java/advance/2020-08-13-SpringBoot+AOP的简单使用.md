@@ -2,7 +2,7 @@
 layout: articles
 title: 数组&链表必会核心知识
 tags:  java基础
-author: WarNing
+author: Warning
 key:    java-advance-head-03
 aside:
   toc: true

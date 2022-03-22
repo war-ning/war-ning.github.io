@@ -2,7 +2,7 @@
 layout: articles
 title: 记一次MyBatis-Plus 批量删除的问题
 tags:  正则验证
-author: WarNing
+author: Warning
 key:    java-advance-head-30
 aside:
   toc: true

@@ -2,7 +2,7 @@
 layout: articles
 title: Java8的stream处理树形结构
 tags:  stream
-author: WarNing
+author: Warning
 key:    java-advance-head-31
 aside:
   toc: true

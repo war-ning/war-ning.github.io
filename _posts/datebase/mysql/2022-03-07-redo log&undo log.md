@@ -2,7 +2,7 @@
 layout: articles
 title: redo log & undo log
 tags:  索引 优化
-author: WarNing
+author: Warning
 key:    datebase-mysql-head-15
 aside:
   toc: true

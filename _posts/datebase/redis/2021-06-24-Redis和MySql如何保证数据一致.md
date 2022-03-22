@@ -2,7 +2,7 @@
 layout: articles
 title: Redis和Mysql如何保证数据一致性
 tags: redis mysql
-author: WarNing
+author: Warning
 key:    datebase-redis-head-01
 aside:
   toc: true

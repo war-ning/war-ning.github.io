@@ -2,7 +2,7 @@
 layout: articles
 title: 使用RestTemplate的@LoadBalanced注解使用报错
 tags:  微服务
-author: WarNing
+author: Warning
 key:    java-advance-head-33
 aside:
   toc: true

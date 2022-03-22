@@ -2,7 +2,7 @@
 layout: articles
 title: Element-ui 表格行内修改
 tags:  Vue
-author: WarNing
+author: Warning
 key:    web-vue-head-03
 aside:
   toc: true

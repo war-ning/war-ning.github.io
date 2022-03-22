@@ -2,7 +2,7 @@
 layout: articles
 title: IDEA 非Maven项目打Jar包
 tags:  部署, IDEA
-author: WarNing
+author: Warning
 key:    java-advance-head-13
 aside:
   toc: true

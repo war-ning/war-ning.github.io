@@ -2,7 +2,7 @@
 layout: articles
 title: SprinbBoot静态资源获取和文件上传
 tags:  工具类
-author: WarNing
+author: Warning
 key:    java-advance-head-04
 aside:
   toc: true
