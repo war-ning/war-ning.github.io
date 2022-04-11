@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: Mybatis-Plus实现真正的批量新增更新
-tags:
+tags:  Mybatis
 author: Warning
 key:    java-advance-head-36
 aside:

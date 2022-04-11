@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: Git中不小心误删Drop Commit如何恢复
-tags: git
+tags:  Git
 author: Warning
 key:    java-advance-head-38
 aside:

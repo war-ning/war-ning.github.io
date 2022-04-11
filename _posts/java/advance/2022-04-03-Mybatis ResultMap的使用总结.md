@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: Mybatis ResultMap的使用总结
-tags:
+tags:  Mybatis
 author: Warning
 key:    java-advance-head-37
 aside:
