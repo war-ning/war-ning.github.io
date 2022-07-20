@@ -1,0 +1,21 @@
+---
+layout: articles
+titles:
+    en:       linux
+    zh:       linux
+sidebar:
+    nav: linux
+---
+
+
+<ul>
+    {% for cat in site.categories %}
+        {% if cat[0] == "linux" %}
+        {% for post in cat[1] %}
+        {{post.date | date:"%Y/%m/%d"}}
+        <font size="3"><a href={{post.url}} title={{ cat[0] }}>{{post.title}}</a></font>
+        <br>
+        {% endfor %}
+        {% endif %}
+    {% endfor %}
+</ul>
