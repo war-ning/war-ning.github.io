@@ -10,6 +10,11 @@ header:
     url: /assets/category/datebase/datebase.html
 
   - titles:
+      en :  Linux
+      zh :  Linux
+    url: /assets/linux/linux.html
+
+  - titles:
       en :  Web
       zh :  前端
     url: /assets/category/web/web.html
