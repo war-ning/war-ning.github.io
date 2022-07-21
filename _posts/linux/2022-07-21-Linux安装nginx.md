@@ -1,6 +1,6 @@
 ---
 layout: articles
-title: Linux安装nginx详细步骤
+title: Linux安装nginx
 tags:  Linux
 author: Warning
 key:    linux-head-3
