@@ -12,7 +12,7 @@ header:
   - titles:
       en :  Linux
       zh :  Linux
-    url: /assets/linux/linux.html
+    url: /assets/category/linux/linux.html
 
   - titles:
       en :  Web
