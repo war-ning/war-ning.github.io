@@ -414,7 +414,25 @@ create user root identified by '123abc';
 
 
 
+### 开启远程访问
 
+```sql
+# 登录到SQL中
+
+use mysql;
+
+# 如果所有的都是localhost,则为不允许远程访问
+select host from user;
+
+# 开启root用户远程访问
+update user set host ='%' where user ='root';
+
+# 权限刷新
+flush privileges;
+
+
+
+```
 
 
 
