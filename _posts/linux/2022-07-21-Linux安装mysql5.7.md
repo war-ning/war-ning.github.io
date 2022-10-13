@@ -123,6 +123,19 @@ rpm -qa|grep mysql
 注意：1. 安装 server 会比较慢；
 2. 如果前面第 1.3 步没检查好，在安装 mysql-community-server 会报错。
 
+3. 安装报错:
+
+**/usr/bin/perl 被 mysql-community-server-8.0.18-1.el7.x86_64 需要
+perl(Getopt::Long) 被 mysql-community-server-8.0.18-1.el7.x86_64 需要
+perl(strict) 被 mysql-community-server-8.0.18-1.el7.x86_64 需要**
+
+![image-20221013110745728](https://raw.githubusercontent.com/war-ning/Pic/master/img/image-20221013110745728.png)
+
+缺少依赖, 安装执行:
+
+> **yum install -y perl-Module-Install.noarch**
+
+
 4 查看MySQL 的安装版本
 执行 " mysqladmin –version " 命令，类似 " java -version " 如果输出版本消息，即为安装成功。
 ![image-20210412151230355](https://img-blog.csdnimg.cn/img_convert/b525a1109e7477dbb8b0ff63ea0dc059.png)
