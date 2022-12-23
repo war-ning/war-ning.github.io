@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: 重试框架 Spring-Retry 和 Guava-Retry
-tags:  Spring-Retry Guava-Retry 重试光加
+tags:  Spring-Retry Guava-Retry 重试框架
 author: Warning
 key:    java-advance-head-33
 aside:

@@ -1,9 +1,9 @@
 ---
 layout: articles
 title: git连接github 443 Time out的处理
-tags:  Spring-Retry Guava-Retry 重试光加
+tags:  github
 author: Warning
-key:    java-advance-head-33
+key:    java-advance-head-34
 aside:
   toc: true
 sidebar:
