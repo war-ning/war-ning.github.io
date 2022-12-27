@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: 重试框架 Spring-Retry 和 Guava-Retry
-tags:  Spring-Retry Guava-Retry 重试框架
+tags:  retry 重试
 author: Warning
 key:    java-advance-head-33
 aside:
@@ -28,6 +28,8 @@ category: [java, advance]
 
 
 ## 一 重试框架之Spring-Retry
+
+参考: [Java工具篇之Spring-retry重试组件-阿里云开发者社区 (aliyun.com)](https://developer.aliyun.com/article/1000279#slide-7)
 
 Spring Retry 为 Spring 应用程序提供了声明性重试支持。它用于Spring批处理、Spring集成、Apache Hadoop(等等)。它主要是针对可能抛出异常的一些调用操作，进行有策略的重试
 
