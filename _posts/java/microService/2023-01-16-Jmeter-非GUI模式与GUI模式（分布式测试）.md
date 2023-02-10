@@ -3,12 +3,12 @@ layout: articles
 title: Jmeter-非GUI模式与GUI模式（分布式测试）
 tags:  Jmeter
 author: Warning
-key:    java-advance-head-37
+key:    java-microService-head-01
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, microService]
 ---
 
 咳咳, 年底工作不饱和, 开始搞了一下压力测试

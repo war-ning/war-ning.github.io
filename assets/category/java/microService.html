@@ -1,8 +1,8 @@
 ---
 layout: articles
 titles:
-    en:       Java8
-    zh:       Java8新特性
+    en:       Micro Service
+    zh:       微服务
 sidebar:
     nav: Java
 ---
@@ -10,7 +10,7 @@ sidebar:
 
 <ul>
     {% for cat in site.categories %}
-        {% if cat[0] == "jdk8" %}
+        {% if cat[0] == "microService" %}
         {% for post in cat[1] %}
         {{post.date | date:"%Y/%m/%d"}}
         <font size="3"><a href={{post.url}} title={{ cat[0] }}>{{post.title}}</a></font>
