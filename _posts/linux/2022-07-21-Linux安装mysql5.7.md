@@ -92,19 +92,21 @@ rpm -qa|grep mysql
   cd /opt
   ```
 
-  使用 wget下载并解压，在下载的过程中会显示进度条，包含 (下载完成百分比，已经下载的字节，当前下载速度，剩余下载时间)
+  使用 wget下载并解压
+
+  这里最好通过mysql.com 去查询适合当前系统的最新安装包
 
 - ```ruby
-  wget http://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.16-1.el7.x86_64.rpm-bundle.tar
-  tar -xvf mysql-5.7.16-1.el7.x86_64.rpm-bundle.tar
+  wget https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.41-1.el7.x86_64.rpm-bundle.tar
+  tar -xvf mysql-5.7.41-1.el7.x86_64.rpm-bundle.tar
   ```
 
   下载完成后，解压，会看到很多 rpm 包，其中的 4 个是必要的：
 
-  mysql-community-common-5.7.16-1.el6.x86_64.rpm
-  mysql-community-libs-5.7.16-1.el6.x86_64.rpm
-  mysql-community-client-5.7.16-1.el6.x86_64.rpm
-  mysql-community-server-5.7.16-1.el6.x86_64.rpm
+  - mysql-community-common-5.7.16-1.el6.x86_64.rpm
+  - mysql-community-libs-5.7.16-1.el6.x86_64.rpm
+  - mysql-community-client-5.7.16-1.el6.x86_64.rpm
+  - mysql-community-server-5.7.16-1.el6.x86_64.rpm
 
 - 3 开始安装
   使用 rpm 命令按顺序依次安装 4 个包：
