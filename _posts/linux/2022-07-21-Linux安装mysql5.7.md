@@ -1,6 +1,6 @@
 ---
 layout: articles
-title: Linux安装mysql5.7
+title: Linux安装常用软件
 tags:  Linux
 author: Warning
 key:    linux-head-4

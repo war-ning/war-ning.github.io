@@ -35,7 +35,7 @@ yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
 
 ```python
 //创建一个文件夹
-cd /usr/local
+cd /etc
 mkdir nginx
 cd nginx
 //下载tar包
@@ -47,7 +47,7 @@ tar -xvf nginx-1.13.7.tar.gz
 
 ```python
 //进入nginx目录
-cd /usr/local/nginx
+cd /etc/nginx
 //进入目录
 cd nginx-1.13.7
 //执行命令 考虑到后续安装ssl证书 添加两个模块
@@ -61,7 +61,7 @@ make install
 ### **4.启动nginx服务**
 
 ```python
- /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+ /etc/nginx/sbin/nginx -c /etc/nginx/conf/nginx.conf
 ```
 
 
@@ -70,7 +70,7 @@ make install
 
 ```python
 # 打开配置文件
-vi /usr/local/nginx/conf/nginx.conf
+vi /etc/nginx/conf/nginx.conf
 ```
 
 将端口号改成8089(随便挑个端口)，因为可能apeache占用80端口，apeache端口尽量不要修改，我们选择修改[nginx](https://so.csdn.net/so/search?q=nginx&spm=1001.2101.3001.7020)端口。
@@ -82,7 +82,7 @@ vi /usr/local/nginx/conf/nginx.conf
 ### **6.重启nginx**
 
 ```python
-/usr/local/nginx/sbin/nginx -s reload
+/etc/nginx/sbin/nginx -s reload
 ```
 
 
