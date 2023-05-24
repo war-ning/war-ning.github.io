@@ -18,139 +18,109 @@ category: [linux]
 
 
 ------
-# Linux mysql5.7安装
+
+# Linux yum安装指定版本的MySQL（如MySQL5.7）
 
 
 
-MySQL Linux版的安装与配置
+**mysql 5.7的yum安装方法：**
 
-安装步骤
-1 检查工作
-1.1 删除已有的相关包
+【注意】不要直接yum install mysql ，因为默认yum源安装的maridb,不是mysql
 
-在安装前需要确定现在这个系统有没有 MySQL，如果有那么必须卸载。尤其是新的 CentOS 7 系统，它自带mariaDB数据库，所以需要卸载掉。
+**去官网找yum**
 
-查找已安装的MySQL软件包：
+网址：https://dev.mysql.com/downloads/repo/yum/
 
-```perl
-rpm -qa|grep mysql
-```
+![img](https://raw.githubusercontent.com/war-ning/Pic/master/img/2020032714161031.png)
 
-- CentOS7下还需要查找是否存在mariadb包
+**可以直接通过wget下载：**
 
-  ```perl
-  rpm -qa|grep mariadb
-  ```
+wget https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm
 
+**安装yum源**
 
+rpm -ivh mysql80-community-release-el7-3.noarch.rpm
 
-- 如果输入上述两个命令后都输出存在有包，则需要执行删除命令。
+说明：虽然下载的源文件名字为mysql80-community-release-el7-3.noarch.rpm，不用担心，里边其实是包含了我们所要装的版本
 
-- 例如，前两步中终端输出了“mysql-libs-5.1.73-1.el6.x86_64”和“mariadb-libs-5.5.56-2.el7.x86_64”，则：
+**安装命令执行完成后，可以查询到新的yum安装包，各种版本的都在其中，查询命令如下：**
 
-- ```css
-  rpm -e --nodeps mysql-libs-5.1.73-1.el6.x86_64
-  rpm -e --nodeps mariadb-libs-5.5.56-2.el7.x86_64
-  ```
+yum repolist all | grep mysql
 
+可以看到，默认的安装源为mysql80-community版本
 
+![img](https://raw.githubusercontent.com/war-ning/Pic/master/img/20200327142331220.png)
 
-- **1.2** **提升权限**
+我想安装的版本是mysql57-community，怎么办？
 
-  由于 MySQL 安装过程中，会通过 MySQL 用户在 /tmp 目录下新建 tmp_db 文件，所以需要给 /tmp 目录较大的权限：
+使用yum-config-manager --disable mysql80-community来取消mysql80-community的默认安装，然后
 
-- ```bash
-  chmod -R 777 /tmp
-  ```
+使用yum-config-manager --enable mysql57-community来使能mysql57-community成为yum默认安装版本。
 
-  **1.3** **检查依赖**
+执行对应命令后，会发现默认版本已经改为我们要安装的5.7版本了
 
-  这一步需要检查系统中是否存在一些安装MySQL时需要的依赖库。因为考虑到大家有些是在虚拟机上安装的Linux系统。如果安装系统的时候用的是最小安装等原因，可能就不存在这些库。
+![img](https://raw.githubusercontent.com/war-ning/Pic/master/img/20200327142538944.png)
 
-- 执行两个查询命令看是否存在依赖库：
+**执行安装命令：**
 
-- ```perl
-  rpm -qa|grep libaio
-  rpm -qa|grep net-tools
-  ```
+yum install mysql-community-server
 
+yum -y install mysql-devel
 
+**启动mysql服务**
 
-- 如果不存在则需要安装：
+systemctl restart mysqld.service //重启mysql服务
 
-- ```undefined
-  yum -y install libaio net-tools
-  ```
+systemctl status mysqld.service //查看mysql状态
 
-  **2** **准备安装包**
+systemctl stop mysqld.service //停止mysql服务
 
-  **2.1 准备安装包方法 1**
+**获取临时密码**
 
-- 首先进入到 /opt目录：
+临时密码存在/var/log/mysqld.log中，使用如下命令查看：
 
-  ```bash
-  cd /opt
-  ```
+grep "temporary password" /var/log/mysqld.log
 
-  使用 wget下载并解压
+**登陆mysql**
 
-  这里最好通过mysql.com 去查询适合当前系统的最新安装包
+mysql -u root -p
 
-- ```ruby
-  wget https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.41-1.el7.x86_64.rpm-bundle.tar
-  tar -xvf mysql-5.7.41-1.el7.x86_64.rpm-bundle.tar
-  ```
+Enter password:
 
-  下载完成后，解压，会看到很多 rpm 包，其中的 4 个是必要的：
+**修改mysql密码**
 
-  - mysql-community-common-5.7.16-1.el6.x86_64.rpm
-  - mysql-community-libs-5.7.16-1.el6.x86_64.rpm
-  - mysql-community-client-5.7.16-1.el6.x86_64.rpm
-  - mysql-community-server-5.7.16-1.el6.x86_64.rpm
+**第一次连接不能用update语句进行密码更改，因为无法选中表**
 
-- 3 开始安装
-  使用 rpm 命令按顺序依次安装 4 个包：
+![img](https://raw.githubusercontent.com/war-ning/Pic/master/img/20200327183444654.png)
 
-  ```vbscript
-  rpm -ivh mysql-community-common-5.7.16-1.el7.x86_64.rpm
-  rpm -ivh mysql-community-libs-5.7.16-1.el7.x86_64.rpm
-  rpm -ivh mysql-community-client-5.7.16-1.el7.x86_64.rpm
-  rpm -ivh mysql-community-server-5.7.16-1.el7.x86_64.rpm
-  ```
+5.7.6版本以前用户可以使用如下命令：
 
-  ![image-20210412151223700](https://img-blog.csdnimg.cn/img_convert/03d4c19b466928d4c459968be72e940c.png)
+SET PASSWORD = PASSWORD('root');
 
+5.7.6版本开始的用户可以使用如下命令：
 
+ALTER USER USER() IDENTIFIED BY 'root';
 
-注意：1. 安装 server 会比较慢；
-2. 如果前面第 1.3 步没检查好，在安装 mysql-community-server 会报错。
+![img](https://raw.githubusercontent.com/war-ning/Pic/master/img/20200327183224590.png)
 
-3. 安装报错:
+![img](https://raw.githubusercontent.com/war-ning/Pic/master/img/20200327183345907.png)
 
-**/usr/bin/perl 被 mysql-community-server-8.0.18-1.el7.x86_64 需要
-perl(Getopt::Long) 被 mysql-community-server-8.0.18-1.el7.x86_64 需要
-perl(strict) 被 mysql-community-server-8.0.18-1.el7.x86_64 需要**
+**update语句更改密码**
 
-![image-20221013110745728](https://raw.githubusercontent.com/war-ning/Pic/master/img/image-20221013110745728.png)
+这里要根据版本来执行不同的SQL语句了，因为版本不同，存储密码的字段可能不相同。5.7以前的版本可以用以下语句更新root密码：
 
-缺少依赖, 安装执行:
+update user set password = password('root') where user='root';
 
-> **yum install -y perl-Module-Install.noarch**
+如果是高版本，则会提示错误信息
 
+ERROR 1054 (42S22): Unknown column 'password' in 'field list'
 
-4 查看MySQL 的安装版本
-执行 " mysqladmin –version " 命令，类似 " java -version " 如果输出版本消息，即为安装成功。
-![image-20210412151230355](https://img-blog.csdnimg.cn/img_convert/b525a1109e7477dbb8b0ff63ea0dc059.png)
+高版本里边没有password，是因为已经改成authentication_string字段了，于是重新执行修改字段后的更新语句
 
-### （三）相应配置
+update user set authentication_string = password('root') where user='root';
 
-**5** **初始化** MySQL
-
-- MySQL 5.7下载完后需要手动初始化：
-
-- ```sql
-  mysqld --initialize --user=mysql
-  ```
+1. grant all privileges on *.* to 'root'@'%' identified by 'root';
+2. flush privileges;
 
 
 
@@ -161,6 +131,7 @@ perl(strict) 被 mysql-community-server-8.0.18-1.el7.x86_64 需要**
   ```
 
   ![image-20210412151241435](https://img-blog.csdnimg.cn/img_convert/9264dec6d1e2939a542e70d85f9aabbe.png)
+
 
   **6** **启动 MySQL 服务**
 
