@@ -3,12 +3,12 @@ layout: articles
 title: 重试框架 Spring-Retry 和 Guava-Retry
 tags:  retry 重试
 author: Warning
-key:    java-advance-head-33
+key:    java-spring-head-01
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, spring]
 ---
 
 新项目是个文件同步系统, 需要做失败重试
