@@ -3,7 +3,7 @@ layout: articles
 title: 重试框架 Spring-Retry 和 Guava-Retry
 tags:  retry 重试
 author: Warning
-key:    java-spring-head-01
+key:    java-spring-head-09
 aside:
   toc: true
 sidebar:

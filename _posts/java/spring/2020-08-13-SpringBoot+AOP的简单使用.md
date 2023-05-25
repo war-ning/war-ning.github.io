@@ -3,12 +3,12 @@ layout: articles
 title: 数组&链表必会核心知识
 tags:  java基础
 author: Warning
-key:    java-advance-head-03
+key:    java-spring-head-01
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, spring]
 ---
 
 

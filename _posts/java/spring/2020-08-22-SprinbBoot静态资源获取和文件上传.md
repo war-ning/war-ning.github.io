@@ -3,12 +3,12 @@ layout: articles
 title: SprinbBoot静态资源获取和文件上传
 tags:  工具类
 author: Warning
-key:    java-advance-head-04
+key:    java-spring-head-02
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, spring]
 ---
 
 

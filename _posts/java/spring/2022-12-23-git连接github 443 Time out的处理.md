@@ -3,12 +3,12 @@ layout: articles
 title: git连接github 443 Time out的处理
 tags:  github
 author: Warning
-key:    java-advance-head-34
+key:    java-spring-head-10
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, spring]
 ---
 
 新项目是个文件同步系统, 需要做失败重试

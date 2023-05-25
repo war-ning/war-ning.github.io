@@ -3,12 +3,12 @@ layout: articles
 title: Validated验证List和异常处理器
 tags:  Valid Validated
 author: Warning
-key:    java-advance-head-32
+key:    java-spring-head-08
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, spring]
 ---
 
 经常遇到一些参数需要验证，用@validated 的分组验证方式很棒，可以解决大量的[冗余]代码，提升美观性。但是我们平时会遇到入参为list的校验

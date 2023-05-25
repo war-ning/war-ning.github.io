@@ -3,12 +3,12 @@ layout: articles
 title: 关于SpringBoot @async注解
 tags:  多线程
 author: Warning
-key:    java-advance-head-31
+key:    java-spring-head-07
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, spring]
 ---
 
 SpringBoot使用异步线程池:

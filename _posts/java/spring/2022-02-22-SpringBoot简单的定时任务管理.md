@@ -3,12 +3,12 @@ layout: articles
 title: SpringBoot简单的定时任务管理
 tags:  定时任务
 author: Warning
-key:    java-advance-head-26
+key:    java-spring-head-5
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, spring]
 ---
 
 
