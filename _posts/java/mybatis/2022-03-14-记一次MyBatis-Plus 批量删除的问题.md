@@ -3,12 +3,12 @@ layout: articles
 title: 记一次MyBatis-Plus 批量删除的问题
 tags:  Mybatis
 author: Warning
-key:    java-advance-head-30
+key:    java-mybatis-head-01
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, mybatis]
 ---
 
 刚来新公司第一天，签完卖身契就来任务了

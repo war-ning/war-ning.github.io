@@ -3,12 +3,12 @@ layout: articles
 title: Mybatis ResultMap的使用总结
 tags:  Mybatis
 author: Warning
-key:    java-advance-head-37
+key:    java-mybatis-head-02
 aside:
   toc: true
 sidebar:
 nav: Java
-category: [java, advance]
+category: [java, mybatis]
 ---
 
 其实本身不是很喜欢用到ResultMap去映射
