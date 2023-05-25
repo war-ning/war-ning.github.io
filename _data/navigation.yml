@@ -19,10 +19,10 @@ header:
       zh :  前端
     url: /assets/category/web/web.html
 
-  - titles:
-      en: Arithmetic
-      zh: 算法题
-    url: /assets/category/arithmetic/arithmetic.html
+#  - titles:
+#      en: Arithmetic
+#      zh: 算法题
+#    url: /assets/category/arithmetic/arithmetic.html
 
   - titles:
       en :  Archive
