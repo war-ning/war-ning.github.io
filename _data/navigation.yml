@@ -68,17 +68,17 @@ Web:
       - title:  Vue进阶
         url:    /assets/category/web/linux.html
 
-Arithmetic:
-  - title:      初级算法
-    children:
-      - title:  数组
-        url:    /assets/category/arithmetic/low/array.html
-      - title:  中级算法
-        url:    /assets/category/arithmetic/low/string.html
-
-  - title:      中级算法
-    children:
-      - title:  数组
-        url:    /assets/category/arithmetic/middle/array.html
-      - title:  中级算法
-        url:    /assets/category/arithmetic/middle/string.html
+#Arithmetic:
+#  - title:      初级算法
+#    children:
+#      - title:  数组
+#        url:    /assets/category/arithmetic/low/array.html
+#      - title:  中级算法
+#        url:    /assets/category/arithmetic/low/string.html
+#
+#  - title:      中级算法
+#    children:
+#      - title:  数组
+#        url:    /assets/category/arithmetic/middle/array.html
+#      - title:  中级算法
+#        url:    /assets/category/arithmetic/middle/string.html
