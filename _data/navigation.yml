@@ -50,7 +50,7 @@ Java:
         url:    /assets/category/java/advance.html
       - title:  微服务
         url:    /assets/category/java/microService.html
-      - title:  高并发
+      - title:  并发编程
         url:    /assets/category/java/concurrency.html
 
   - title:      技术框架
